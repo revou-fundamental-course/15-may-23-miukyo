@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Katik</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
@@ -18,7 +18,6 @@
         <p>Katik. adalah web apps untuk menghitung nilai luas dan keliling bangun datar</p>
       </div>
       <div class="app">
-
         <!-- Luas -->
         <div class="wrapper">
           <h1 class="fb">Luas Persegi</h1>
@@ -34,7 +33,11 @@
             <span class="divider"></span>
             <h1 class="fb">Hitung Luas Persegi</h1>
             <form id="hitung-luas">
-              <input type="number" id="sisi-luas" placeholder="Silahkan input panjang sisi" />
+              <input
+                type="text"
+                name="sisi-luas"
+                id="sisi-luas"
+                placeholder="Silahkan input panjang sisi" />
               <div style="margin-block: 1rem">
                 <p class="error" id="error-luas"></p>
                 <p id="rumus-luas"></p>
@@ -42,7 +45,7 @@
                 <p id="output-luas"></p>
               </div>
               <div style="display: flex; gap: 0.5rem; justify-content: center">
-                <button type="submit">Hitung</button>
+                <button name="hitung-luas" type="submit">Hitung</button>
                 <button type="button" onclick="resetLuas()" class="rst">Reset</button>
               </div>
             </form>
@@ -64,7 +67,11 @@
             <span class="divider"></span>
             <h1 class="fb">Hitung Keliling Persegi</h1>
             <form id="hitung-keliling">
-              <input type="number" id="sisi-keliling" placeholder="Silahkan input panjang sisi" />
+              <input
+                type="text"
+                name="sisi-keliling"
+                id="sisi-keliling"
+                placeholder="Silahkan input panjang sisi" />
               <div style="margin-block: 1rem">
                 <p class="error" id="error-keliling"></p>
                 <p id="rumus-keliling"></p>
@@ -72,7 +79,7 @@
                 <p id="output-keliling"></p>
               </div>
               <div style="display: flex; gap: 0.5rem; justify-content: center">
-                <button type="submit">Hitung</button>
+                <button name="hitung-keliling" type="submit">Hitung</button>
                 <button type="button" onclick="resetKeliling()" class="rst">Reset</button>
               </div>
             </form>
@@ -81,6 +88,6 @@
       </div>
     </main>
     <footer>@2023 Muhammad Aliy Hijja Zaid</footer>
-    <script src="main.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

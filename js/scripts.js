@@ -4,11 +4,6 @@ let sisiLuasElement = document.getElementById("sisi-luas");
 let hitungKelilingElement = document.getElementById("hitung-keliling");
 let sisiKelilingElement = document.getElementById("sisi-keliling");
 
-// fungsi untuk memformat angka agar mudah terbaca
-function formatNum(e) {
-  return new Intl.NumberFormat().format(e);
-}
-
 // menggunakan event listener submit ke form hitung luas
 hitungLuasElement.addEventListener("submit", (e) => {
   // mengambil value angka sisi luas
@@ -16,18 +11,16 @@ hitungLuasElement.addEventListener("submit", (e) => {
   // mencegah page untuk refresh
   e.preventDefault();
   // if statement untuk validasi bahwa sisi memiliki value
-  if (sisiLuas > 0) {
+  if (sisiLuas > 0 && parseInt(sisiLuas)) {
     document.getElementById("error-luas").innerText = "";
     document.getElementById("rumus-luas").innerText = "L = S x S";
-    document.getElementById("cara-luas").innerText = `L = ${formatNum(sisiLuas)} x ${formatNum(
-      sisiLuas
-    )}`;
-    document.getElementById("output-luas").innerText = `L = ${formatNum(sisiLuas * sisiLuas)}`;
+    document.getElementById("cara-luas").innerText = `L = ${sisiLuas} x ${sisiLuas}`;
+    document.getElementById("output-luas").innerText = `L = ${sisiLuas * sisiLuas}`;
   }
   // jika tidak memilki value maka reset hasil (jika ada) dan memberikan error message
   else {
     resetLuas();
-    document.getElementById("error-luas").innerText = "Mohon isi input terlebih dahulu";
+    document.getElementById("error-luas").innerText = "Mohon isi input dengan angka";
   }
 });
 
@@ -47,16 +40,16 @@ hitungKelilingElement.addEventListener("submit", (e) => {
   // mencegah page untuk refresh
   e.preventDefault();
   // if statement untuk validasi bahwa sisi memiliki value
-  if (sisiKeliling > 0) {
+  if (sisiKeliling > 0 && parseInt(sisiKeliling)) {
     document.getElementById("error-keliling").innerText = "";
     document.getElementById("rumus-keliling").innerText = "L = 4 x S";
-    document.getElementById("cara-keliling").innerText = `L = 4 x ${formatNum(sisiKeliling)}`;
-    document.getElementById("output-keliling").innerText = `L = ${formatNum(4 * sisiKeliling)}`;
+    document.getElementById("cara-keliling").innerText = `L = 4 x ${sisiKeliling}`;
+    document.getElementById("output-keliling").innerText = `L = ${4 * sisiKeliling}`;
   }
   // jika tidak memilki value maka reset hasil (jika ada) dan memberikan error message
   else {
     resetKeliling();
-    document.getElementById("error-keliling").innerText = "Mohon isi input terlebih dahulu";
+    document.getElementById("error-keliling").innerText = "Mohon isi input dengan angka";
   }
 });
 
