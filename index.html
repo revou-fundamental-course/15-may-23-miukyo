@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katik</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="fb">Katik.</h1>
+      <p>Kalkulator Matematik</p>
+    </header>
+    <main>
+      <div class="welcome">
+        <h1 class="fb">Welcome!</h1>
+        <p>Katik. adalah web apps untuk menghitung nilai luas dan keliling bangun datar</p>
+      </div>
+      <div class="app">
+
+        <!-- Luas -->
+        <div class="wrapper">
+          <h1 class="fb">Luas Persegi</h1>
+          <div class="content">
+            <img width="200px" style="margin-inline: auto" src="persegi.svg" />
+            <p style="color: red; margin-top: -20px; margin-bottom: 20px">Persegi</p>
+            <p>Rumus luas persegi yaitu :</p>
+            <p style="font-size: 1.3rem; margin-block: 1rem">L = S x S</p>
+            <div style="color: #737373">
+              <p>Pengertian :</p>
+              <p>L = Luas , S = Sisi</p>
+            </div>
+            <span class="divider"></span>
+            <h1 class="fb">Hitung Luas Persegi</h1>
+            <form id="hitung-luas">
+              <input type="number" id="sisi-luas" placeholder="Silahkan input panjang sisi" />
+              <div style="margin-block: 1rem">
+                <p class="error" id="error-luas"></p>
+                <p id="rumus-luas"></p>
+                <p id="cara-luas"></p>
+                <p id="output-luas"></p>
+              </div>
+              <div style="display: flex; gap: 0.5rem; justify-content: center">
+                <button type="submit">Hitung</button>
+                <button type="button" onclick="resetLuas()" class="rst">Reset</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Keliling -->
+        <div class="wrapper">
+          <h1 class="fb">Keliling Persegi</h1>
+          <div class="content">
+            <img width="200px" style="margin-inline: auto" src="persegi.svg" />
+            <p style="color: red; margin-top: -20px; margin-bottom: 20px">Persegi</p>
+            <p>Rumus keliling persegi yaitu :</p>
+            <p style="font-size: 1.3rem; margin-block: 1rem">L = 4 x S</p>
+            <div style="color: #737373">
+              <p>Pengertian :</p>
+              <p>L = Keliling , S = Sisi</p>
+            </div>
+            <span class="divider"></span>
+            <h1 class="fb">Hitung Keliling Persegi</h1>
+            <form id="hitung-keliling">
+              <input type="number" id="sisi-keliling" placeholder="Silahkan input panjang sisi" />
+              <div style="margin-block: 1rem">
+                <p class="error" id="error-keliling"></p>
+                <p id="rumus-keliling"></p>
+                <p id="cara-keliling"></p>
+                <p id="output-keliling"></p>
+              </div>
+              <div style="display: flex; gap: 0.5rem; justify-content: center">
+                <button type="submit">Hitung</button>
+                <button type="button" onclick="resetKeliling()" class="rst">Reset</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>@2023 Muhammad Aliy Hijja Zaid</footer>
+    <script src="main.js"></script>
+  </body>
+</html>
